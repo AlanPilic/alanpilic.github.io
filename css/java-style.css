@@ -1,0 +1,35 @@
+body {
+  background-color: #dfdfdf;
+  font-family: 'Open Sans', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Montserrat', sans-serif;
+}
+h3 {
+  color: #278c88;
+}
+.main-wrapper {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.main-wrapper h1 {
+  color: #3885ca;
+}
+.main-wrapper .intro {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+}
+pre {
+  white-space: pre-wrap;
+}
+@media (max-width: 900px) {
+  .main-wrapper {
+    width: 100%;
+  }
+}

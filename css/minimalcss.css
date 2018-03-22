@@ -1,0 +1,344 @@
+/* Hello Corey, this a simple proof of concept of what we talked about in our meeting it's not necessarily the full capabilities of what can be done. Given more time
+and attention to detail there can clearly be more done, but this should amply serve as a proof of concept */
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.coverpage .image {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: block;
+}
+
+.coverpage-header h1 {
+    font-weight: 400;
+    font-size: 5.6em;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3), -2px 4px 2px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+.coverpage-header h3 {
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3), -2px 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.coverpage-header .content {
+    color: white;
+    text-align: center;
+    text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+    vertical-align: center;
+    line-height: 1.7;
+    position: relative;
+    top: 33%;
+    right: 26%;
+}
+
+.coverpage-header .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+}
+
+.coverpage {
+    position: relative;
+}
+
+.coverpage .inner-container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+
+.presentation-header {
+    margin-top: 30px;
+}
+
+.presentation-paragraph {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.intro-container {
+	padding-top: 170px;
+	padding-bottom: 170px;
+}
+
+
+.breakingpoint {
+    background-image: url('../img/mmimg1.jpeg');
+
+    /* Set a specific height */
+    min-height: 200px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.center-text {
+    position: relative;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 125px;
+}
+
+
+
+.single-plan-table {
+	max-width: 100%;
+    height: auto;
+}
+
+.pricing-point-container {
+    margin-top: 100px; margin-bottom: 100px;
+}
+
+.center-header {
+    text-align: center;
+    
+}
+
+
+.text-align {
+    text-align: center;
+}
+
+.pricing-inner-container {
+    margin-top: 80px;
+}
+
+.bold-header {
+    font-weight: 700;
+}
+
+.subscription-container {
+    background-color: #eae9e5;
+}
+
+.subscription-inner {
+    margin-top: 100px;
+}
+
+.subscription-inner h3 {
+    font-size: 36px;
+}
+
+.subscription-inner h6 {
+    margin-bottom: 30px;
+    font-size: 17px;
+}
+
+.subscription-outer {
+    margin-bottom: 130px;
+}
+
+#subs {
+    margin-left: 10px;
+
+}
+
+.input-groupa {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+#email-input {
+    
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    border: 0px solid #ccc;
+    border-bottom: none;
+    background-color: white;
+}
+
+#sub-button {
+    border-radius: 25px;
+    border-top-left-radius: 1;
+    border-bottom-left-radius: 1;
+    background-color: #ffffff;
+    margin-left: 25px;
+    
+    font-size: 16px;
+    margin-top: -2px;
+}
+
+
+.breakingpoint h1 {
+    color: #000;
+    font-size:60px;
+    font-weight: 700;
+}
+
+.footer-container {
+    margin-top: 100px; 
+    margin-bottom: 100px;
+}
+
+.footer-inner {
+    margin-top: 80px;
+}
+
+
+ul {
+    list-style-type:none;
+    padding-left: 0px;
+}
+
+@media (min-width: 500px) {
+
+    .input-groupa {
+        max-width: 50%;
+    }
+    
+}
+
+@media (max-width: 410px) {
+
+    .input-group-btn {
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #sub-button {
+        margin-top: 10px;
+    }
+
+}
+
+@media (max-width: 510px) {
+
+    .breakingpoint h1 {
+         font-size:30px;
+    }
+
+
+}
+
+
+@media (max-width: 767px) {
+
+.plant-container {
+    margin-top: 50px;
+}
+
+}
+
+@media (max-width: 800px) {
+
+    .coverpage-header h1 {
+        font-size: 42px;
+    }
+
+    .coverpage-header .content {
+    top: 33%;
+    right: 3%;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .plant-margin {
+        margin-top: 50px;
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 1600px) {
+
+    .coverpage-header .content {
+    top: 33%;
+    right: 3%;
+    }
+
+}
+
+/* These are obviously the break points I specifically over-wrote as the bootstrap framework is doing the heavy lifting in regards to responsive design,
+had I not been using bootstrap I would set break points at specific intervals depending on how big of a net I want to cast. Naturally, the breakpoints are made based
+on how many devices you want the code to look the best on. Here is an example of just doing it for instance for a windows phone. */
+
+/* ----------- Windows Phone ----------- */
+
+/* Portrait and Landscape */
+@media screen 
+  and (device-width: 480px) 
+  and (device-height: 800px) {
+
+}
+
+/* Portrait */
+@media screen 
+  and (device-width: 480px) 
+  and (device-height: 800px)  
+  and (orientation: portrait) {
+
+}
+
+/* Landscape */
+@media screen 
+  and (device-width: 480px) 
+  and (device-height: 800px) 
+  and (orientation: landscape) {
+
+}
+
+/* Generally speaking these are very specific user requirements that a customer might want, otherwise you could do a bottom up approach where you cover all the
+minmum points and go up, for example */
+
+/* code pertaining to phones that are less than 580px */
+@media (max-width: 580px) {
+
+    /* to over-write bootstraps margins and padding */
+    div {
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .row {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .intro-container {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
+
+/* code from 580px and up i.e. tablets kindles etc... */
+@media (min-width: 580px) {
+
+}
+
+/* for basic desktops viewports */
+@media (min-width: 1200px) {
+
+}
+
+/* for the 2k+ 4k+ monitor set up and so forth */
+@media (min-width: 1920px) {
+
+}

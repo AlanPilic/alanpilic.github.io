@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Example</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/java-style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+
+        <div class="intro">
+
+            <div>
+                <h1>Introduction to Java</h1>
+                <p>
+                    Java is an object-oriented language, statically strong-typed programming language. Java is primarily used in somewhere of
+                    the vicinity of 3 billion applications. Quite the number, Java's uses grow every day and is the first
+                    language of many modern software engineers. The purpose of this page is to showcase small snippets of
+                    fun programs I created, showcasing some of the features of the language. The page will focus less on
+                    HTML/CSS and more on java code, with that said the code you can follow along by using a Integrated Development
+                    Environment of your choice, my personal preference being Eclipse.
+                </p>
+
+            </div>
+
+
+            <div>
+                <h3>It always starts with a system output call</h3>
+                <pre>
+package examples;
+
+public class basic {
+
+    public static void main(String[] args) {
+        
+        System.out.println("Hi there! Welcome to my Java Page");
+
+    }
+
+}
+                    </pre>
+                <p>This basic command in Java prints whatever contents are inside out to our screen. The basic idea behind the
+                    function is whatever is called within the quotations will be output to the screen via the compiler.
+                </p>
+                <pre>
+public static void main(String[] args) {
+
+    String _aGreeting = "Hi there! Welcome to my Java Page";
+
+    System.out.println(_aGreeting);
+
+}
+                    </pre>
+                <p>This is also another way of getting the same result as the example above. The reason behind this is that
+                    Java is an object oriented language, therefore it allows you to utilize many classes and objects within
+                    it's library to be more productive, think of frameworks in JavaScript. For further reading I suggest
+                    taking a look at the Java documentation as it does an amazing job at explaining the language in detail.
+                </p>
+
+                <h3>Guessing game but with strings, showcases simple loops, arrays, conditionals, very common syntax amongst
+                    languages
+                </h3>
+
+                <p>A very simple game that showcases the syntax for Java to guess the correct mythos within an array</p>
+
+                <pre>
+public static void main(String[] args) {
+
+    String[] _mythologyArray = new String[10];
+    
+    _mythologyArray[0] = "Thor";
+    _mythologyArray[1] = "Odin";
+    _mythologyArray[2] = "Zeus";
+    _mythologyArray[3] = "Hercules";
+    _mythologyArray[4] = "Prometheus";
+    _mythologyArray[5] = "Balder";
+    _mythologyArray[6] = "Aphrodite";
+    _mythologyArray[7] = "Gilgamesh";
+    _mythologyArray[8] = "Eos";
+    _mythologyArray[9] = "Fenrir";
+    
+    Scanner input = new Scanner(System.in);
+    String guessMythos = "";
+    
+    Random rand = new Random();
+    
+    int n;
+    
+    String quit = "no";
+    
+    while(!quit.toLowerCase().equals("yes")) {
+        
+        n = rand.nextInt(10);
+        
+        System.out.println("Here's a hint the mythos starts with " + _mythologyArray[n].charAt(0));		
+        
+        int trys = 3;
+        
+        while(trys!= 0) {		
+            
+            System.out.println("Take a guess at what mythos character I am");
+            
+            guessMythos = input.nextLine();
+            
+            for(int i = 0; i < _mythologyArray.length; i++) {
+                
+                if (guessMythos.equals(_mythologyArray[i])) {
+                    System.out.println("you guessed right!");
+                    trys = 0;
+                }
+                
+            }
+            
+            // Logical Check
+            if(trys != 0) {
+                trys--;
+                System.out.println("You have " + trys + " guesses remaining");	
+            }
+            
+            // Gives the user a last chance by looking at the last character of the array
+            if(trys == 1) {
+                System.out.println("Alright, I'll give you another hint the last character is " + _mythologyArray[n].charAt(_mythologyArray[n].length() - 1))  ;
+            }
+            
+        }
+        
+        System.out.println("Quit? Yes or No?");
+        quit = input.nextLine();
+    
+    }
+    
+}
+                </pre>
+
+                <h3> Let's jump into Object Oriented Programing, objects are like real life objects, objects have characteristics
+                    that define them and serve as blueprints</h3>
+
+                <p>In this example I've created an object called Animal. The object holds attributes such as the amount of leg's
+                    it has and whether it has a trunk or tail and a private variable only accessible through methods to retain
+                    variable integrity</p>
+
+                <pre>
+public class animal {
+
+    String name = "";
+    int legs = 2;
+    int arms = 2;
+    int runningSpeed = 3;
+    String tail = "yes";
+    String claws = "yes";
+    String trunk = "no";
+
+    private int weight = 0;
+    
+    // constructor
+    public animal(int _legs, int _arms, int _runningSpeed, String _tail, String _claws, String _trunk) {
+        this.legs = _legs;
+        this.arms= _arms;
+        this.runningSpeed = _runningSpeed;
+        this.tail = _tail;
+        this.claws = _claws;
+        this.trunk = _trunk;
+    }
+    
+    public animal(String _name) {
+        this.name = _name;
+    }
+    
+    // methods that change private fields
+    void changeWeight(int _weight) {
+        this.weight = _weight;
+    }
+    
+    void changeMySpeed(int _speed) {
+        this.runningSpeed = _speed;
+    }
+    
+    void printAttributes() {
+        System.out.println("My animal's name is " + name + ", it has " + legs + " legs, " + 
+                arms + " arms, it runs at the speed of " + runningSpeed + 
+                " mph, it has a private weight of " + weight + " lbs. ");
+        System.out.println(tail + " to having a tail, " + claws + " to having claws, and lastly "
+                + trunk + " to having a trunk.");
+    }
+    
+
+}
+                </pre>
+
+                <p> We call this class by creating an instance of the animal class by instantiating the class in the main class
+                    :</p>
+
+                <pre>
+public static void main(String[] args) {
+    animal tiger = new animal(2, 2, 30, "Yes", "Yes", "No");
+    tiger.name = "Tiger";
+    tiger.changeWeight(800);
+    tiger.printAttributes();
+    
+    animal bear = new animal(2, 2, 20, "Yes", "Yes", "No");
+    bear.name = "Bear";
+    bear.changeWeight(1200);
+    bear.printAttributes();
+    
+    animal elephant = new animal(2, 2, 15, "Yes", "Yes", "Yes");
+    elephant.name = "Elephant";
+    elephant.changeWeight(1500);
+    elephant.printAttributes();
+}
+                </pre>
+
+                <p>By creating copies of the animal without having to constantly recreate the same blueprint (animal object) over and over with
+                    the same redudant code, one can see why the object oriented language is so useful</p>
+
+                <h3> Let us jump into some data structures now, the bread and butter for most middleware languages. I'll start with a simple example of Array Lists</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
