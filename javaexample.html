@@ -223,7 +223,79 @@ public static void main(String[] args) {
                 <p>By creating copies of the animal without having to constantly recreate the same blueprint (animal object) over and over with
                     the same redudant code, one can see why the object oriented language is so useful</p>
 
-                <h3> Let us jump into some data structures now, the bread and butter for most middleware languages. I'll start with a simple example of Array Lists</h3>
+                <h3> Moving onto data structures, the bread and butter for most middleware languages. I'll start with a simple example of Array Lists</h3>
+
+                <p>This is a simple example of a declration of an Array-List. An Array-List is practically the same data structure as an array but it doesn't require initial space declaration.</p>
+
+                <pre>
+ArrayList<String> arrayListOfStrings = new ArrayList<String>();
+
+    arrayListOfStrings.add("Hello");
+    arrayListOfStrings.add("I am");
+    arrayListOfStrings.add("An Array List");
+    arrayListOfStrings.add("of Strings");
+
+System.out.println(arrayListOfStrings);
+                </pre>
+
+                <p>The output for this will yield : </p>
+
+                <pre>
+[Hello, I am, An Array List, of Strings]
+                </pre>
+
+                <p>Now let's add a bit more complexity to this by adding in our animal objects into an array list of animals</p>
+
+                <pre>
+animal tiger = new animal(2, 2, 30, "Yes", "Yes", "No");
+tiger.name = "Tiger";
+tiger.changeWeight(800);
+
+animal lion = new animal(2, 2, 25, "Yes", "Yes", "No");
+lion.name = "Lion";
+lion.changeWeight(900);
+
+animal cat = new animal(2, 2, 18, "Yes", "Yes", "No");
+cat.name = "Cat";
+cat.changeWeight(10);
+
+ArrayList<span><<span><span>animal></span> aListOfCats = new ArrayList<span><<span><span>animal></span>();
+
+aListOfCats.add(tiger);
+aListOfCats.add(lion);
+aListOfCats.add(cat);
+                </pre>
+
+                <p>If we go ahead and print this now Java will give us the name of the class and the memory reference to this object. The most common method to print out 
+                    the contents of the object is to override the toString method to print out the contents of our object but that is a topic for another time.
+                </p>
+
+                <h3>Let's go over some HashMaps as they are also a very frequently used data structure</h3>
+
+                <p>Hash Maps are useful if you need to use a key value pairing of sorts in a data structure, a practical example of this would be a dictionary. Now let's take a looking 
+                    at a implementation of a Hash Map.
+                </p>
+
+                <pre>
+HashMap<span><</span>Integer, ArrayList> aKingdom = new HashMap<span><</span>Integer, ArrayList>();
+
+        aKingdom.put(0, aListOfCats);
+        aKingdom.put(1, aListOfBears);
+        aKingdom.put(2, aListOfElephants);
+        Set<span><</span>Integer> keys = aKingdom.keySet();
+        
+        for(Integer key: keys) {
+            
+            for(int i = 0 ; i < aKingdom.get(key).size(); i++) {
+                System.out.println(key + " is = " + aKingdom.get(key).get(i).toString());
+            }
+            
+        }
+                </pre>
+
+                <p>For this example I created additional Array Lists from our previous example and added them accordingly to our HashMap called aKingdom, which is a reference to 
+                    an animal kingdom. Each list of animals has a corresponding integer, 0 being the list of cats, 1 being a list of bears, 2 being a list of elephants. HashMaps differ a bit
+                in syntax as they have what is called Keys, therefore we call the Set keys structure to extrapulate the specific key from the map and print it out via the for loop.</p>
 
             </div>
 
