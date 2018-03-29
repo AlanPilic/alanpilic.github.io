@@ -3,14 +3,13 @@
 
 <head>
 	<meta charset=utf-8 />
-	<title></title>
+	<title>JavaScript Examples</title>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
 	 crossorigin="anonymous">
 
-
-
 	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
+	<link rel="stylesheet" type="text/css" href="css/javascript-animation-style.css">
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
@@ -22,11 +21,70 @@
 
 	<div class="wrapper">
 
+		<section id="animation-section">
+
+			<div class="top-bar">
+
+				<div>
+					<svg class="left-click-icon" width="32" height="32" style="position: fixed; top: 16px; left: 15px; cursor: pointer; fill: rgba(68, 185, 226, 0.74);">
+						<path d="M16 32c8.837 0 16-7.163 16-16s-7.163-16-16-16-16 7.163-16 16 7.163 16 16 16zM16 3c7.18 0 13 5.82 13 13s-5.82 13-13 13-13-5.82-13-13 5.82-13 13-13z"></path>
+						<path d="M20.914 9.914l-2.829-2.829-8.914 8.914 8.914 8.914 2.828-2.828-6.086-6.086z"></path>
+					</svg>
+				</div>
+
+				<div>
+					<svg class="right-click-icon" width="32" height="32" style="position: fixed; top: 16px; right: 15px; cursor: pointer; fill: rgba(68, 185, 226, 0.74);">
+						<path d="M16 0c-8.837 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM16 29c-7.18 0-13-5.82-13-13s5.82-13 13-13 13 5.82 13 13-5.82 13-13 13z"></path>
+						<path d="M11.086 22.086l2.829 2.829 8.914-8.914-8.914-8.914-2.828 2.828 6.086 6.086z"></path>
+					</svg>
+				</div>
+
+			</div>
+
+			<div class="left-bar">
+
+				<div>
+
+				</div>
+
+				<div>
+					<p class="greeting">Hi there! Welcome to my JS site!</p>
+				</div>
+
+			</div>
+
+			<div class="right-bar">
+
+				<div class="inside-right-bar">
+
+					<h1>Purpose</h1>
+
+					<p>I would like to offer a warm welcome to whomever is viewing this page.
+							The purpose of this page is to illustrate some examples of JavaScript I have conjured in
+							my free time.
+					</p>
+
+					<p>If you are interested in how some of these features were implemented drop by my github as all of this 
+						code is posted there publicly for anyone to use. With that being said if you are interested in having some of these features
+						implented on your own webpage, drop me a line on LinkedIn and I'll be more than welcome to help.
+					</p>
+					<p>
+						Cheers, Alan
+					</p>
+						
+					
+				</div>
+
+			</div>
+
+		</section>
+
 		<section id="dynamic-boxes">
 
 			<div class="container-fluid container-padding">
 
-				<h1> A simple example of dynamic content creation via Javascript </h1>
+				<h1> Create Dynamic Content with Javascript!</h1>
+				<h5>Out of thin electrons through a transister and into the DOM!</h5>
 
 				<div class="row">
 
@@ -35,12 +93,12 @@
 					</div>
 
 					<div class="col-sm-3">
-							<button class="btn btn-success big-buttons" id="click-me-3"> 3 X Dynamic Content</button>
-						</div>
+						<button class="btn btn-success big-buttons" id="click-me-3"> 3 X Dynamic Content</button>
+					</div>
 
 					<div class="col-sm-3">
-							<button class="btn btn-primary big-buttons" id="click-me"> Timed Content</button>
-						</div>
+						<button class="btn btn-primary big-buttons" id="click-me"> Timed Content</button>
+					</div>
 
 					<div class="col-sm-3">
 						<button class="btn btn-info big-buttons" id="click-me-30"> 30 X Dynamic Content</button>
@@ -53,7 +111,6 @@
 				</div>
 
 			</div>
-
 
 		</section>
 
@@ -93,7 +150,7 @@
 
 				<h5>Hint, the username is
 					<b>user</b> and password is
-					<b>123456</b>, doesn't quite make it a hint but none the less try to enter in a incorrect combination.
+					<b>123456</b>, doesn't quite make it a hint but none the less try to enter in an incorrect combination.
 				</h5>
 
 			</div>
@@ -147,7 +204,6 @@
 								</div>
 							</div>
 						</form>
-
 
 						<p id="heroObjects"></p>
 
@@ -262,7 +318,7 @@
 
 				<div class="row">
 
-					<h1> This input checks if the word entered is a Palindrome and outputs it </h1>
+					<h1> Arrival, the movie, is one of my favorites, so naturally a Palindrome checker </h1>
 
 					<div class="col-md-12">
 
@@ -280,7 +336,6 @@
 							</div>
 						</form>
 
-
 						<p>Is the word a palindrome? :
 							<br>
 							<span id="isPalindrome"></span>
@@ -291,7 +346,6 @@
 				</div>
 
 			</div>
-
 
 		</section>
 
@@ -319,7 +373,6 @@
 							</div>
 						</form>
 
-
 						<p>Is the item in the inventory? :
 							<br>
 							<span id="isInInventory"></span>
@@ -333,12 +386,11 @@
 
 		</section>
 
-
 	</div>
-
 
 </body>
 
 <script type="text/javascript" src="js/basicscripts.js"></script>
+<script type="text/javascript" src="js/javascript-animation.js"></script>
 
 </html>
