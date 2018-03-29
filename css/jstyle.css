@@ -1,33 +1,81 @@
-.containerPadding {
-	    padding: 20px;
-	    margin-top: 20px;
-	    text-align: center;
-	    border-radius: 20px;
+@media (min-width: 1200px) {
+	.wrapper {
+		width: 1200px;
+		margin: 0 auto;
+	}
+}
+
+#dynamic-boxes, #login-validation, #paper-game, #compound-interest, #palindrome, #object-verify {
+	position: relative;
+}
+
+.container-padding {
+	background: rgba(0, 0, 0, 0.16);
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.container-padding:before {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 40px solid #1e1e1e;
+    border-right: 40px solid rgba(99, 85, 85, 0.2);
+}
+
+.big-buttons {
+	padding: 17px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+h1, h3 {
+	font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1.9px;
+}
+
+.no-margin {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#dynamic-boxes h1, #paper-game h1, #login-validation h1,  #compound-interest h1, #palindrome h1, #object-verify h1 {
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 img {
 	max-width: 100%;
 }
 
+.login .form-group .control-label {
+	padding-top: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 400;
+}
+
 
 
 body {
 	font-family: 'Raleway', sans-serif;
+	padding: 10px;
+	background-color: #1e1e1e;
+	color: #fff;
+
 }
 
 #combatText {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
-    display: none;
-}
-
-@media (min-width: 990px) {
-
-#combatText {
-	    max-width: 50%;
-}
-
+	display: none;
+	color: #7f3ce6;
 }
 
 #result {
@@ -35,10 +83,10 @@ body {
 }
 
 #userName {
-	padding: 30px 70px;
+	padding: 25px 35px;
     border: none;
     background-color: #5ac1de;
-    border-radius: 5px;
+    border-radius: 2px;
     color: #ffffff;
     font-size: 16px;
 }
@@ -48,10 +96,10 @@ input::placeholder {
 }
 
 #password {
-	padding: 30px 70px;
+	padding: 25px 35px;
     border: none;
     background-color: #5ac1de;
-    border-radius: 5px;
+    border-radius: 2px;
     color: #ffffff;
     font-size: 16px;
 }
@@ -61,23 +109,40 @@ input::placeholder {
 	    color: #ffffff;
 }
 
-.bigButtons {
-	padding: 30px 30px;
+.dynamic-block {
+	background-color: #0000001a;
+	min-height: 481px;
+	border: solid #333333;
+	border-radius: 2px;
 }
 
 
-@media (min-width: 1270px) {
 
-.container {
-    width: 1270px;
-}
-
-}
 
 @media (min-width: 992px) {
 
 	.col-md-2 {
 		border: #8996a2 3px solid;
 	}
+
+}
+
+@media (min-width: 990px) {
+
+	#combatText {
+			max-width: 50%;
+	}
+	
+}
+
+@media (max-width: 400px) {
+	.dynamic-block {
+		min-height: 400px;
+	}
+}
+
+@media (max-width: 768px) {
+
+	
 
 }

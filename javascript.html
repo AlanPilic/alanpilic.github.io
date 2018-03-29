@@ -1,332 +1,340 @@
 <!DOCTYPE html>
-<html> 
+<html>
+
 <head>
-<meta charset=utf-8 />
-<title></title>
-<style type="text/css">
-body {margin: 30px;}
-</style>
+	<meta charset=utf-8 />
+	<title></title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	 crossorigin="anonymous">
 
 
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/jstyle.css">
 
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
-
-<link rel="stylesheet" type="text/css" href="css/jstyle.css">
-
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-
-<link rel="icon" href="img/icon.png">
+	<link rel="icon" href="img/icon.png">
 
 </head>
+
 <body>
 
+	<div class="wrapper">
 
-<section id="dynamicMovies">
+		<section id="dynamic-boxes">
 
-	<div class="container-fluid containerPadding" style="background-color: #def2ff;">
+			<div class="container-fluid container-padding">
 
-		<h1> A simple example of dynamic content creation via Javascript </h1>
+				<h1> A simple example of dynamic content creation via Javascript </h1>
 
-		<div class="row">
+				<div class="row">
 
-			<div class="col-sm-4">
-			<button class="btn btn-primary bigButtons" style="margin-top: 20px; margin-bottom: 30px;" id="click-me"> Click this button to create dynamic content</button>
+					<div class="col-sm-3">
+						<button class="btn btn-primary big-buttons" id="click-me-1"> 1 X Dynamic Content</button>
+					</div>
+
+					<div class="col-sm-3">
+							<button class="btn btn-success big-buttons" id="click-me-3"> 3 X Dynamic Content</button>
+						</div>
+
+					<div class="col-sm-3">
+							<button class="btn btn-primary big-buttons" id="click-me"> Timed Content</button>
+						</div>
+
+					<div class="col-sm-3">
+						<button class="btn btn-info big-buttons" id="click-me-30"> 30 X Dynamic Content</button>
+					</div>
+
+				</div>
+
+				<div class="row no-margin" id="dynamic-row">
+
+				</div>
+
 			</div>
 
-			<div class="col-sm-4">
-			<button class="btn btn-success bigButtons" style="margin-top: 20px; margin-bottom: 30px;" id="click-me-3"> 3 X Dynamic Content</button>
+
+		</section>
+
+		<section id="login-validation">
+
+			<div class="container-fluid container-padding">
+
+				<h1> Login Validation </h1>
+
+				<div class="row">
+
+					<div class="col-md-12">
+
+						<form class="form-horizontal login" name="loginForm" action="#">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Username :</label>
+								<div class="col-sm-4">
+									<input type="text" class="form-control" id="userName" placeholder="Enter in your login please">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Password :</label>
+								<div class="col-sm-4">
+									<input type="password" class="form-control" id="password" placeholder="Enter in your password please">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-success" id="login">Login</button>
+								</div>
+							</div>
+						</form>
+
+					</div>
+
+				</div>
+
+				<h5>Hint, the username is
+					<b>user</b> and password is
+					<b>123456</b>, doesn't quite make it a hint but none the less try to enter in a incorrect combination.
+				</h5>
+
 			</div>
 
-			<div class="col-sm-4">
-			<button class="btn btn-info bigButtons" style="margin-top: 20px; margin-bottom: 30px;" id="click-me-30"> 30 X Dynamic Content</button>
+		</section>
+
+		<section id="paper-game">
+
+			<div class="container-fluid container-padding">
+
+				<div class="row">
+
+					<h1> Paper Game Randomizer</h1>
+
+					<div class="col-md-6">
+
+						<form class="form-horizontal" name="" action="#">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Enter Hero Name :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="hero" placeholder="" onChange="heroStats()">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Class :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="heroClass" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Health :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="heroHealth" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Sword :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="heroSwordName" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Weapon Damage :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="heroOne" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-4 col-sm-6">
+									<button type="button" class="btn btn-warning" id="swordButton" onClick="getNewSword()" disabled>Roll for a new Sword</button>
+								</div>
+							</div>
+						</form>
+
+
+						<p id="heroObjects"></p>
+
+					</div>
+
+					<div class="col-md-6">
+
+						<form class="form-horizontal" name="" action="#">
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Monster Name :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="monster" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Class :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="monsterClass" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Health :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="monsterHealth" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Weapon :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="monsterWeapon" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-sm-4 control-label">Weapon Damage :</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="monsterDmgOne" readonly>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-offset-4 col-sm-6">
+									<button type="button" class="btn btn-warning" id="monsterButton" onClick="getNewMonster()" disabled>Randomize Monster</button>
+								</div>
+							</div>
+						</form>
+
+
+						<p id="monsterObjects"></p>
+
+					</div>
+
+				</div>
+
+				<button type="button" class="btn btn-danger" id="engage" onClick="engage()" style="display: none;">Engage!</button>
+
+				<div id="combatText" class="well well-lg">Test</div>
+
+
+
 			</div>
-				
-		</div>
 
-		<div class="row" id="dynamicRow">
+		</section>
 
-		</div>
+		<section id="compound-interest">
+
+			<div class="container-fluid container-padding">
+
+				<h1> Simple Compound Interest Calculator </h1>
+
+				<div class="col-md-12">
+
+					<form class="form-horizontal" name="" action="#">
+						<div class="form-group">
+							<label class="col-sm-5 control-label">Current Principal :</label>
+							<div class="col-sm-3">
+								<input type="number" class="form-control" id="principal">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-5 control-label">Years to Grow :</label>
+							<div class="col-sm-3">
+								<input type="number" class="form-control" id="yearsGrow">
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-sm-5 control-label">Interest Rate :</label>
+							<div class="col-sm-3">
+								<input type="number" class="form-control" id="interestRate">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-md-12">
+								<button type="button" class="btn btn-warning" id="calculate-button">Calculate</button>
+							</div>
+						</div>
+					</form>
+
+
+					<p>The Compounded Value is :
+						<br>
+						<span id="result"></span>
+					</p>
+
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="palindrome">
+
+			<div class="container-fluid container-padding">
+
+				<div class="row">
+
+					<h1> This input checks if the word entered is a Palindrome and outputs it </h1>
+
+					<div class="col-md-12">
+
+						<form class="form-horizontal" name="" action="#">
+							<div class="form-group">
+								<label class="col-sm-5 control-label">Enter word to be checked :</label>
+								<div class="col-sm-4">
+									<input type="text" class="form-control" id="string">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-warning" id="check-palindrome">Check if Palindrome</button>
+								</div>
+							</div>
+						</form>
+
+
+						<p>Is the word a palindrome? :
+							<br>
+							<span id="isPalindrome"></span>
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+		</section>
+
+		<section id="object-verify">
+
+			<div class="container-fluid container-padding">
+
+				<div class="row">
+
+					<h1> A simple array checker to see if a specific object is in an array </h1>
+
+					<div class="col-md-12">
+
+						<form class="form-horizontal" name="" action="#">
+							<div class="form-group">
+								<label class="col-sm-5 control-label">Enter item to be checked :</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="item">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-12">
+									<button type="button" class="btn btn-warning" id="in-array-button" onClick="">Check Inventory</button>
+								</div>
+							</div>
+						</form>
+
+
+						<p>Is the item in the inventory? :
+							<br>
+							<span id="isInInventory"></span>
+						</p>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</section>
+
 
 	</div>
-
-
-</section>
-
-<section id="loginValidation">
-
-<div class="container-fluid containerPadding" style="background-color: #def2ff;">
-
-	<h1 style="margin-bottom: 50px;"> Login Validation </h1>
-
-	<div class="row">
-
-		<div class="col-md-5 col-md-offset-3" >
-
-				<form class="form-horizontal" name="loginForm" action="#">
-				  <div class="form-group">
-				    <label class="col-sm-4 control-label" style="padding-top: 20px;">Username :</label>
-				    <div class="col-sm-6">
-				      <input type="text" class="form-control" id="userName" placeholder="Enter in your login please">
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label class="col-sm-4 control-label" style="padding-top: 20px;">Password :</label>
-				    <div class="col-sm-6">
-				      <input type="password" class="form-control" id="password" placeholder="Enter in your password please">
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-offset-4 col-sm-6">
-				      <button type="button" class="btn btn-success" id="login">Login</button>
-				    </div>
-				  </div>
-				</form>
-
-		</div>
-
-	</div>
-
-	<h5>Hint, the username is <b>user</b> and password is <b>123456</b>, doesn't quite make it a hint but none the less try to enter in a incorrect combination.</h5>
-
-</div>
-
-</section>
-
-<section id="paperGame">
-
-<div class="container containerPadding" style="background-color: #def2ff; text-align: center;">
-
-	<div class="row">
-
-		<h1 style="margin-bottom: 50px;"> Paper Game Randomizer</h1>
-
-		<div class="col-sm-offset-1 col-md-5" >
-
-			<form class="form-horizontal" name="" action="#">
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Enter Hero Name :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="hero" placeholder="" onChange="heroStats()">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Class :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="heroClass" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Health :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="heroHealth" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Sword :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="heroSwordName" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Weapon Damage :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="heroOne" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-4 col-sm-6">
-			      <button type="button" class="btn btn-warning" id="swordButton" onClick="getNewSword()" disabled>Roll for a new Sword</button>
-			    </div>
-			  </div>
-			</form>
-
-
-			<p id="heroObjects"></p>
-
-		</div>
-
-		<div class="col-sm-offset-1 col-md-5">
-
-			<form class="form-horizontal" name="" action="#">
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Monster Name :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="monster" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Class :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="monsterClass" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Health :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="monsterHealth" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Weapon :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="monsterWeapon" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Weapon Damage :</label>
-			    <div class="col-sm-6">
-			      <input type="text" class="form-control" id="monsterDmgOne" readonly>
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-4 col-sm-6">
-			      <button type="button" class="btn btn-warning" id="monsterButton" onClick="getNewMonster()" disabled>Randomize Monster</button>
-			    </div>
-			  </div>
-			</form>
-
-
-			<p id="monsterObjects"></p>
-
-		</div>
-
-	</div>
-
-	<button type="button" class="btn btn-danger" id="engage" onClick="engage()" style="display: none;">Engage!</button>
-
-	<div id="combatText" class="well well-lg">Test</div>
-
-
-
-</div>
-
-</section>
-
-<section id="compoundInterest">
-
-<div class="container-fluid containerPadding" style="background-color: #def2ff;">
-
-	<h1> Simple Compound Interest Calculator </h1>
-
-	<p style="margin-bottom: 50px; margin-top: 20px;">An example of javascript is the multi functional properties of it. Within the past few years javascript has grown into a fully capable web application language
-	that bridges the gap between back end and front end.</p>
-
-	<div class="col-md-5 col-md-offset-3">
-
-			<form class="form-horizontal" name="" action="#">
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Current Principal :</label>
-			    <div class="col-sm-6">
-			      <input type="number" class="form-control" id="principal" onchange="changeCurrency(document.getElementById('principal').value)">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Years to Grow :</label>
-			    <div class="col-sm-6">
-			      <input type="number" class="form-control" id="yearsGrow">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label class="col-sm-4 control-label">Interest Rate :</label>
-			    <div class="col-sm-6">
-			      <input type="number" class="form-control" id="interestRate"> 
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <div class="col-sm-offset-4 col-sm-6">
-			      <button type="button" class="btn btn-warning" id="calculate-button">Calculate</button>
-			    </div>
-			  </div>
-			</form>
-
-
-			<p>The Compounded Value is : <br>
-			<span id = "result"></span>
-			</p>
-
-	</div>
-
-</div>
-
-</section>
-
-<section id="palindrome">
-
-<div class="container containerPadding" style="background-color: #def2ff;">
-
-	<div class="row">
-
-		<h1 style="margin-bottom: 50px;"> This input checks if the word entered is a Palindrome and outputs it </h1>
-
-		<div class="col-md-5 col-md-offset-3">
-
-				<form class="form-horizontal" name="" action="#">
-				  <div class="form-group">
-				    <label class="col-sm-4 control-label">Enter word to be checked :</label>
-				    <div class="col-sm-6">
-				      <input type="text" class="form-control" id="string">
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-offset-4 col-sm-6">
-				      <button type="button" class="btn btn-warning" id="check-palindrome">Check Input to See if Palindrome</button>
-				    </div>
-				  </div>
-				</form>
-
-
-				<p>Is the word a palindrome? : <br>
-				<span id = "isPalindrome"></span>
-				</p>
-
-		</div>
-
-	</div>
-
-</div>
-
-
-</section>
-
-<section id="objectVerify">
-
-<div class="container-fluid containerPadding" style="background-color: #def2ff;">
-
-	<div class="row">
-
-		<h1 style="margin-bottom: 50px;"> A simple array checker to see if a specific object is in an array </h1>
-
-		<div class="col-md-5 col-md-offset-3">
-
-				<form class="form-horizontal" name="" action="#">
-				  <div class="form-group">
-				    <label class="col-sm-4 control-label">Enter item to be checked :</label>
-				    <div class="col-sm-6">
-				      <input type="text" class="form-control" id="item">
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <div class="col-sm-offset-4 col-sm-6">
-				      <button type="button" class="btn btn-warning" id="in-array-button" onClick="">Check to see if the item is in the array</button>
-				    </div>
-				  </div>
-				</form>
-
-
-				<p>Is the item in the inventory? : <br>
-				<span id = "isInInventory"></span>
-				</p>
-
-		</div>
-
-	</div>
-
-</div>
-
-</section>
-
 
 
 </body>
