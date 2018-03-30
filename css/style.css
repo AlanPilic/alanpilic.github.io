@@ -59,6 +59,9 @@ body {
   .portfolio-node-js div {
     color: #c80107;
   }
+  .portfolio-default div {
+    color: #121212;
+  }
   .opacity-block:hover img {
     opacity: .18;
   }
