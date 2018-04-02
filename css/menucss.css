@@ -61,8 +61,10 @@ linear-gradient(to right, rgb(229, 93, 135), rgb(95, 195, 228));
 
 */
 
-* {
-	box-sizing: border-box;
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
@@ -87,7 +89,7 @@ body {
 }
 
 .right-bar {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: 0;
 	width: 20%;
@@ -110,10 +112,9 @@ body {
 	letter-spacing: 6px;
 }
 
-.inside-right-bar p {}
 
 .left-bar {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 20%;
