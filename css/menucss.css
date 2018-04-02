@@ -1,70 +1,9 @@
-/*
-shore - 
-linear-gradient(to right, rgb(112, 225, 245), rgb(255, 209, 148));
-
-man of steel - red purple to blue
-linear-gradient(to right, rgb(120, 2, 6), rgb(6, 17, 97));
-
-
-shadow night
-linear-gradient(to right, rgb(0, 0, 0), rgb(83, 52, 109));
-
-ash
-linear-gradient(to right, rgb(96, 108, 136), rgb(63, 76, 107));
-
-earthly
-linear-gradient(to right, rgb(100, 145, 115), rgb(219, 213, 164));
-
-dark red 
-linear-gradient(to right, rgb(135, 0, 0), rgb(25, 10, 5));
-
-winter
-linear-gradient(to right, rgb(230, 218, 218), rgb(39, 64, 70));
-
-a lost memory
-linear-gradient(to right, rgb(222, 98, 98), rgb(255, 184, 140));
-
-pinot noir dark blue
-linear-gradient(to right, rgb(75, 108, 183), rgb(24, 40, 72));
-
-miaka redishblue to teal
-linear-gradient(to right, rgb(252, 53, 76), rgb(10, 191, 188));
-
-dark purple redish
-linear-gradient(to right, rgb(192, 72, 72), rgb(72, 0, 72));
-
-burbon - darksih orange to lightish orange
-linear-gradient(to right, rgb(236, 111, 102), rgb(243, 161, 131));
-
-light purple to darker beigeish red brown i dont know
-linear-gradient(to right, rgb(218, 226, 248), rgb(214, 164, 164));
-
-peach redish to light orange
-linear-gradient(to right, rgb(237, 66, 100), rgb(255, 237, 188));
-
-dark reddish to purpleish
-linear-gradient(to right, rgb(220, 36, 36), rgb(74, 86, 157));
-
-titanium
-linear-gradient(to right, rgb(40, 48, 72), rgb(133, 147, 152));
-
-pinkyish
-linear-gradient(to right, rgb(221, 94, 137), rgb(247, 187, 151));
-
-purple 
-linear-gradient(to right, rgb(29, 43, 100), rgb(248, 205, 218));
-
-rose - water 
-linear-gradient(to right, rgb(229, 93, 135), rgb(95, 195, 228));
-
-
-
-*/
-
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+*,
+:after,
+:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
@@ -111,7 +50,6 @@ body {
 .inside-right-bar h1 {
 	letter-spacing: 6px;
 }
-
 
 .left-bar {
 	position: fixed;
@@ -353,6 +291,14 @@ h3 {
 	.inside-right-bar p {
 		text-transform: none;
 		font-size: 14px;
+	}
+}
+
+@media (max-width: 600px) {
+	.wrapper h3 {
+		font-size: 11px;
+		letter-spacing: 1px;
+		width: 62%;
 	}
 }
 
