@@ -322,6 +322,21 @@ body {
 .products {
   margin-top: 100px;
 }
+.products .main-product-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.products .main-product-container .internal-product-container .products ul {
+  list-style-type: none;
+}
+.products .main-product-container .internal-product-container .products ul li {
+  width: 24%;
+  display: inline-block;
+}
+.products .main-product-container .internal-product-container .products ul li div img {
+  max-width: 100%;
+  height: auto;
+}
 @media (max-width: 900px) {
   .intro-section {
     overflow-x: hidden;
