@@ -208,4 +208,13 @@
     .main-content-column {
       flex: 32%;
     }
+
+    .main-content-column:nth-child(2) {
+      margin-top: 70px;
+    }
+
+    .main-content-column:nth-child(3) {
+      margin-top: 140px;
+    }
+
   }
